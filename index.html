@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Web-to-Lead Form</title>
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    form {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    label, select, input {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input[type="checkbox"] {
+      display: inline-block;
+      width: auto;
+    }
+
+    input[type="submit"] {
+      background-color: #0070d2;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005bb5;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>상담 신청 폼</h1>
+
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK000005xa1N" method="POST">
+    <input type="hidden" name="oid" value="00DgK000005xa1N">
+    <input type="hidden" name="retURL" value="https://webtolead-nine.vercel.app">
+
+    <!-- 디버그용 -->
+    <!-- <input type="hidden" name="debug" value="1">
+    <input type="hidden" name="debugEmail" value="didrldudnj@gmail.com"> -->
+
+    <label for="company">고객명</label>
+    <input id="company" maxlength="40" name="company" type="text" />
+
+    <label for="phone">연락처</label>
+    <input id="phone" maxlength="40" name="phone" type="text" />
+
+    <label for="email">이메일</label>
+    <input id="email" maxlength="80" name="email" type="text" />
+
+    <label for="00NgK000015uJsb">지역</label>
+    <select id="00NgK000015uJsb" name="00NgK000015uJsb" title="지역">
+      <option value="">--선택--</option>
+      <option value="서울">서울</option>
+      <option value="부산">부산</option>
+      <option value="대구">대구</option>
+      <option value="인천">인천</option>
+      <option value="광주">광주</option>
+      <option value="대전">대전</option>
+      <option value="울산">울산</option>
+      <option value="세종">세종</option>
+      <option value="경기">경기</option>
+      <option value="강원">강원</option>
+      <option value="충북">충북</option>
+      <option value="충남">충남</option>
+      <option value="전북">전북</option>
+      <option value="전남">전남</option>
+      <option value="경북">경북</option>
+      <option value="경남">경남</option>
+      <option value="제주">제주</option>
+    </select>
+
+    <label for="00NgK000015uK8j">자치구</label>
+    <select id="00NgK000015uK8j" name="00NgK000015uK8j" title="자치구">
+      <option value="">--선택--</option>
+      <option value="강남구">강남구</option>
+      <option value="강동구">강동구</option>
+      <option value="강북구">강북구</option>
+      <option value="강서구">강서구</option>
+      <option value="관악구">관악구</option>
+      <option value="광진구">광진구</option>
+      <option value="구로구">구로구</option>
+      <option value="금천구">금천구</option>
+      <option value="노원구">노원구</option>
+      <option value="도봉구">도봉구</option>
+      <option value="동대문구">동대문구</option>
+      <option value="동작구">동작구</option>
+      <option value="마포구">마포구</option>
+      <option value="서대문구">서대문구</option>
+      <option value="서초구">서초구</option>
+      <option value="성동구">성동구</option>
+      <option value="성북구">성북구</option>
+      <option value="송파구">송파구</option>
+      <option value="양천구">양천구</option>
+      <option value="영등포구">영등포구</option>
+      <option value="용산구">용산구</option>
+      <option value="은평구">은평구</option>
+      <option value="종로구">종로구</option>
+      <option value="중구">중구</option>
+      <option value="중랑구">중랑구</option>
+    </select>
+
+    <label for="00NgK000015uKLd">상세주소</label>
+    <input id="00NgK000015uKLd" maxlength="30" name="00NgK000015uKLd" type="text" />
+
+    <label for="last_name">성</label>
+    <input id="last_name" maxlength="80" name="last_name" type="text" />
+
+    <label for="first_name">이름</label>
+    <input id="first_name" maxlength="40" name="first_name" type="text" />
+
+    <label for="00NgK000015uLmM">자녀 생년월일</label>
+    <input id="00NgK000015uLmM" maxlength="10" name="00NgK000015uLmM" type="text" placeholder="YYYY-MM-DD" />
+
+    <label for="00NgK000015uQsT">관심과목</label>
+    <select id="00NgK000015uQsT" multiple="multiple" name="00NgK000015uQsT" title="관심과목">
+      <option value="국어">국어</option>
+      <option value="수학">수학</option>
+      <option value="영어">영어</option>
+      <option value="한자">한자</option>
+      <option value="과학">과학</option>
+    </select>
+
+    <label><input id="00NgK000015ulPv" name="00NgK000015ulPv" type="checkbox" value="1" /> 개인정보 수집 및 이용 동의</label>
+    <label><input id="00NgK000015uJix" name="00NgK000015uJix" type="checkbox" value="1" /> 마케팅 정보 수신 동의</label>
+
+    <input type="submit" name="submit" value="제출하기">
+  </form>
+
+</body>
+</html>
