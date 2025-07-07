@@ -1,166 +1,149 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <title>커먼학살 상담신청 폼</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1>무료상담 신청</h1>
-      <form
-        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK000005xa1N"
-        method="POST"
-      >
-        <input type="hidden" name="oid" value="00DgK000005xa1N" />
-        <input
-          type="hidden"
-          name="retURL"
-          value="https://webtolead-delta.vercel.app/submit_success.html"
-        />
-        <input type="hidden" name="oid" value="00DgK000005xa1N" />
 
-        <!-- 신청정보 입력 -->
-        <div class="section-title">신청정보 입력</div>
-        <div class="form-group">
-          <label for="company"
-            >학부모 이름<span class="required">*</span></label
-          >
-          <input
-            id="company"
-            type="text"
-            name="company"
-            maxlength="8"
-            placeholder="학부모 이름 입력"
-            required
-          />
+<head>
+  <meta charset="UTF-8" />
+  <title>커먼학습 상담신청 폼</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>무료상담 신청</h1>
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DgK000005xa1N"
+      method="POST">
+      <input type="hidden" name="oid" value="00DgK000005xa1N" />
+      <input type="hidden" name="retURL" value="https://webtolead-delta.vercel.app/submit_success.html" />
+      <input type="hidden" name="oid" value="00DgK000005xa1N" />
+
+      <!-- 신청정보 입력 -->
+      <div class="section-title">신청정보 입력</div>
+      <div class="form-group">
+        <label for="company">학부모 이름<span class="required">*</span></label>
+        <input id="company" type="text" name="company" maxlength="8" placeholder="학부모 이름 입력" required />
+      </div>
+      <div class="form-group">
+        <label for="phone">연락처<span class="required">*</span></label>
+        <input id="phone" type="text" name="phone" maxlength="15" placeholder="'-' 없이 숫자만 입력 예)01012345678" required />
+      </div>
+
+      <!-- 주소정보 입력 -->
+      <div class="form-group">
+        <label>주소<span class="required">*</span></label>
+        <div class="address-inline">
+          <label for="00NgK000015uJsb">지역</label>
+          <select id="region" name="00NgK000015uJsb" title="지역" required>
+            <option value="">--선택--</option>
+            <option value="서울">서울</option>
+            <option value="부산">부산</option>
+            <option value="대구">대구</option>
+            <option value="인천">인천</option>
+            <option value="광주">광주</option>
+            <option value="대전">대전</option>
+            <option value="울산">울산</option>
+            <option value="세종">세종</option>
+            <option value="경기">경기</option>
+            <option value="강원">강원</option>
+            <option value="충북">충북</option>
+            <option value="충남">충남</option>
+            <option value="전북">전북</option>
+            <option value="전남">전남</option>
+            <option value="경북">경북</option>
+            <option value="경남">경남</option>
+            <option value="제주">제주</option>
+          </select>
+
+          <label for="00NgK000015uK8j">자치구</label>
+          <select id="district" name="00NgK000015uK8j" title="자치구" required>
+            <option value="">--선택--</option>
+
+          </select>
         </div>
-        <div class="form-group">
-          <label for="phone">연락처<span class="required">*</span></label>
-          <input
-            id="phone"
-            type="text"
-            name="phone"
-            maxlength="15"
-            placeholder="'-' 없이 숫자만 입력 예)01012345678"
-            required
-          />
-        </div>
+      </div>
+      <div class="form-group">
+        <label for="00NgK000015uKLd">상세주소<span class="required">*</span></label>
+        <input type="text" name="00NgK000015uKLd" maxlength="30" placeholder="상세주소 입력" />
+      </div>
 
-        <!-- 주소정보 입력 -->
-        <div class="form-group">
-          <label>주소<span class="required">*</span></label>
-          <div class="address-inline">
-            <label for="00NgK000015uJsb">지역</label>
-            <select name="00NgK000015uJsb" title="지역" required>
-              <option value="">--선택--</option>
-              <option value="서울">서울</option>
-              <option value="부산">부산</option>
-              <option value="대구">대구</option>
-              <option value="인천">인천</option>
-              <option value="광주">광주</option>
-              <option value="대전">대전</option>
-              <option value="울산">울산</option>
-              <option value="세종">세종</option>
-              <option value="경기">경기</option>
-              <option value="강원">강원</option>
-              <option value="충북">충북</option>
-              <option value="충남">충남</option>
-              <option value="전북">전북</option>
-              <option value="전남">전남</option>
-              <option value="경북">경북</option>
-              <option value="경남">경남</option>
-              <option value="제주">제주</option>
-            </select>
 
-            <label for="00NgK000015uK8j">자치구</label>
-            <select name="00NgK000015uK8j" title="자치구" required>
-              <option value="">--선택--</option>
-              <option value="강남구">강남구</option>
-              <option value="강동구">강동구</option>
-              <option value="강북구">강북구</option>
-              <option value="강서구">강서구</option>
-              <option value="관악구">관악구</option>
-              <option value="광진구">광진구</option>
-              <option value="구로구">구로구</option>
-              <option value="금천구">금천구</option>
-              <option value="노원구">노원구</option>
-              <option value="도봉구">도봉구</option>
-              <option value="동대문구">동대문구</option>
-              <option value="동작구">동작구</option>
-              <option value="마포구">마포구</option>
-              <option value="서대문구">서대문구</option>
-              <option value="서초구">서초구</option>
-              <option value="성동구">성동구</option>
-              <option value="성북구">성북구</option>
-              <option value="송파구">송파구</option>
-              <option value="양천구">양천구</option>
-              <option value="영등포구">영등포구</option>
-              <option value="용산구">용산구</option>
-              <option value="은평구">은평구</option>
-              <option value="종로구">종로구</option>
-              <option value="중구">중구</option>
-              <option value="중랑구">중랑구</option>
+
+      <div id="child-forms">
+        <!-- 자녀정보 입력 -->
+        <div class="child-form">
+          <div class="section-title-row">
+            <span class="section-title">자녀정보 입력</span>
+            <span class="sub-text">맞춤 상담을 위해 자녀의 이름과 생년월일을 입력해 주세요.</span>
+          </div>
+          <div class="form-group">
+            <label for="last_name">자녀 이름<span class="required">*</span></label>
+            <input id="last_name" type="text" name="last_name" maxlength="8" placeholder="자녀 이름 입력" required />
+          </div>
+          <div class="form-group">
+            <label>자녀 생년월일<span class="required">*</span></label>
+            <input id="00NgK000015uLmM" type="text" name="00NgK000015uLmM" placeholder="8자리 숫자만 입력 예)20170101"
+              required />
+          </div>
+          <div class="form-group">
+            <label>관심과목<span class="required">*</span></label>
+            <div id="checkbox-subjects">
+              <label><input type="checkbox" value="국어"> 국어</label><br>
+              <label><input type="checkbox" value="수학"> 수학</label><br>
+              <label><input type="checkbox" value="영어"> 영어</label><br>
+              <label><input type="checkbox" value="한자"> 한자</label><br>
+              <label><input type="checkbox" value="과학"> 과학</label>
+            </div>
+            <select id="00NgK000015uQsT" multiple="multiple" name="00NgK000015uQsT" title="관심과목" style="display:none;">
+              <option value="국어">국어</option>
+              <option value="수학">수학</option>
+              <option value="영어">영어</option>
+              <option value="한자">한자</option>
+              <option value="과학">과학</option>
+
             </select>
           </div>
         </div>
-        <div class="form-group">
-          <label for="00NgK000015uKLd"
-            >상세주소<span class="required">*</span></label
-          >
-          <input
-            type="text"
-            name="00NgK000015uKLd"
-            maxlength="30"
-            placeholder="상세주소 입력"
-          />
+
+        <!-- 숨겨진 자녀 폼 (버튼 누르면 보임) -->
+        <div class="child-form hidden" id="second-child-form">
+          <div class="section-title-row">
+            <span class="section-title">추가 자녀 정보 입력</span><br>
+            <span class="sub-text">맞춤 상담을 위해 자녀의 이름과 생년월일을 입력해 주세요.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="last_name2">자녀 이름</label>
+            <input id="00NgK0000164J1h" type="text" name="00NgK0000164J1h" maxlength="8" placeholder="자녀 이름 입력"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label>자녀 생년월일</label>
+            <input id="00NgK0000164J1h" type="text" name="00NgK0000164J1h" placeholder="8자리 숫자만 입력 예)20170101"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label>관심과목</label>
+            <select id="subject2" multiple="multiple" name="subject2" title="관심과목">
+              <option value="국어">국어</option>
+              <option value="수학">수학</option>
+              <option value="영어">영어</option>
+              <option value="한자">한자</option>
+              <option value="과학">과학</option>
+            </select>
+          </div>
         </div>
 
-        <!-- 자녀정보 입력 -->
-        <div class="section-title-row">
-          <span class="section-title">자녀정보 입력</span>
-          <span class="sub-text"
-            >맞춤 상담을 위해 자녀의 이름과 생년월일을 입력해 주세요.</span
-          >
-        </div>
-        <div class="form-group">
-          <label for="last_name"
-            >자녀 이름<span class="required">*</span></label
-          >
-          <input
-            id="last_name"
-            type="text"
-            name="last_name"
-            maxlength="8"
-            placeholder="자녀 이름 입력"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label>자녀 생년월일<span class="required">*</span></label>
-          <input
-            id="00NgK000015uLmM"
-            type="text"
-            name="00NgK000015uLmM"
-            placeholder="8자리 숫자만 입력 예)20170101"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label>관심과목<span class="required">*</span></label>
-          <select
-            id="00NgK000015uQsT"
-            multiple="multiple"
-            name="00NgK000015uQsT"
-            title="관심과목"
-          >
-            <option value="국어">국어</option>
-            <option value="수학">수학</option>
-            <option value="영어">영어</option>
-            <option value="한자">한자</option>
-            <option value="과학">과학</option>
-          </select>
-        </div>
+      </div>
+
+      <button type="button" class="child-toggle-btn" id="toggle-btn" onclick="showSecondChild()">+ 자녀 추가</button>
+
+
+      <div class="section-title-row">
+        <span class="section-title">약관 동의</span>
+        <span class="sub-text">.</span>
+      </div>
+      <div class="show-box">
         <!-- 전체동의 -->
         <div class="term-row">
           <label class="term-label">
@@ -174,29 +157,15 @@
           <!-- 14세 이상 -->
           <div class="term-row" onclick="toggleContent('t1')">
             <label class="term-label">
-              <input
-                type="checkbox"
-                class="required-term"
-                name="up18__c"
-                value="1"
-                required
-              />
-              <span class="term-text"
-                >[필수] 상담정보 입력자는 만 14세 이상입니다.</span
-              >
+              <input type="checkbox" class="required-term" name="up18__c" value="1" required />
+              <span class="term-text">[필수] 상담정보 입력자는 만 14세 이상입니다.</span>
             </label>
           </div>
 
           <!-- 개인정보 수집 이용 동의 -->
           <div class="term-row" onclick="toggleContent('t2')">
             <label class="term-label">
-              <input
-                type="checkbox"
-                class="required-term"
-                name="PrivacyConsent__c"
-                value="1"
-                required
-              />
+              <input type="checkbox" class="required-term" name="PrivacyConsent__c" value="1" required />
               <span class="term-text">[필수] 개인정보 수집 및 이용동의</span>
             </label>
             <span>▼</span>
@@ -213,17 +182,9 @@
           <!-- 만 14세 미만 동의 -->
           <div class="term-row" onclick="toggleContent('t3')">
             <label class="term-label">
-              <input
-                type="checkbox"
-                class="required-term"
-                name="under__c"
-                value="1"
-                required
-              />
-              <span class="term-text"
-                >[필수] 만 14세 미만 아동의 개인정보 수집 및 이용에 대한
-                법정대리인 동의</span
-              >
+              <input type="checkbox" class="required-term" name="under__c" value="1" required />
+              <span class="term-text">[필수] 만 14세 미만 아동의 개인정보 수집 및 이용에 대한
+                법정대리인 동의</span>
             </label>
             <span>▼</span>
           </div>
@@ -251,10 +212,11 @@
           동의를 거부할 수 있으나, 거부 시 고객 맞춤 서비스 제공, 광고성(이벤트)
           정보 제공 및 참여 기획이 제한됩니다.
         </div>
+      </div>
+      <button type="submit">무료상담 신청하기</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
 
-        <button type="submit">무료상담 신청하기</button>
-      </form>
-    </div>
-    <script src="script.js"></script>
-  </body>
 </html>

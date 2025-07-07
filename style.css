@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
 }
 
+.hidden {
+  display: none;
+}
+
 h1 {
   text-align: center;
   font-size: 32px;
@@ -75,6 +79,42 @@ button {
   border: none;
   margin-top: 40px;
   cursor: pointer;
+}
+
+.show-box {
+  border: 1px solid #ddd;
+  /* 연한 회색 테두리 */
+  border-radius: 12px;
+  /* 둥근 모서리 */
+  padding: 20px;
+  /* 안쪽 여백 */
+  background-color: #fff;
+  /* 배경 흰색 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  /* 은은한 그림자 */
+  margin-bottom: 20px;
+  /* 아래 여백 */
+}
+
+.child-toggle-btn {
+  width: auto;
+  /* 너비 자유롭게 */
+  padding: 10px 15px;
+  background-color: white;
+  /* 하얀색 배경 */
+  color: #333;
+  /* 글자색 어두운 회색 */
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  /* 테두리 추가 */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.child-toggle-btn:hover {
+  background-color: #f0f0f0;
+  /* 마우스 오버 시 */
 }
 
 .term-row {
