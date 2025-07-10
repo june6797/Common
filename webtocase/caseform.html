@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-to-Case Form</title>
+  </head>
+  <body>
+    <h1>고객 서비스 요청</h1>
+
+    <form
+      action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000005xa1N"
+      method="POST"
+    >
+      <!-- 필수 hidden 필드들 -->
+      <input type="hidden" name="orgid" value="00DgK000005xa1N" />
+      <input type="hidden" name="retURL" value="http://naver.com" />
+
+      <!-- 고객 정보 입력 필드 -->
+      학부모 이름:<input
+        id="00NgK000016nB4n"
+        maxlength="8"
+        name="00NgK000016nB4n"
+        size="20"
+        type="text"
+      /><br />
+
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        maxlength="80"
+        size="20"
+        required
+      /><br /><br />
+
+      <label for="phone">Phone</label><br />
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        maxlength="40"
+        size="20"
+        required
+      /><br /><br />
+
+      <label for="subject">Subject</label><br />
+      <input
+        type="text"
+        id="subject"
+        name="subject"
+        maxlength="80"
+        size="20"
+        required
+      /><br /><br />
+
+      <label for="description">Description</label><br />
+      <textarea name="description" rows="4" cols="50" required></textarea
+      ><br /><br />
+
+      <label for="type">Type</label><br />
+      <select id="type" name="type" required>
+        <option value="">--선택--</option>
+        <option value="학습/평가">학습/평가</option>
+        <option value="태블릿">태블릿</option>
+        <option value="결제">결제</option>
+        <option value="기타">기타</option>
+        <option value="시스템장애">시스템장애</option></select
+      ><br /><br />
+
+      <!-- 외부 제출 필드 -->
+      <input
+        type="hidden"
+        id="external"
+        name="external"
+        value="1"
+      /><br /><br />
+
+      <!-- 제출 버튼 -->
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
