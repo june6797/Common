@@ -10,14 +10,14 @@
 
   <body>
     <div class="container">
-      <h1>고객 서비스 요청</h1>
-
       <form
         id="contactForm"
         action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK000005xa1N"
         method="POST"
       >
         <div class="form-section">
+          <div class="section-title">상담정보 입력</div>
+
           <label for="name">이름</label>
           <input
             type="text"
@@ -37,6 +37,7 @@
             placeholder="휴대폰 번호 입력"
             required
           />
+          <button type="button" class="verify-btn">인증</button>
         </div>
 
         <div class="form-section">
@@ -51,6 +52,8 @@
         </div>
 
         <div class="form-section">
+          <div class="section-title">상담 내용</div>
+
           <label for="subject">제목</label>
           <input
             type="text"

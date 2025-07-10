@@ -1,4 +1,4 @@
-/* 스타일 초기화 */
+/* 기본 스타일 초기화 */
 * {
   margin: 0;
   padding: 0;
@@ -7,23 +7,25 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f4f4f9;
   padding: 20px;
 }
 
 .container {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
   background-color: white;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .form-section {
@@ -31,8 +33,10 @@ h1 {
 }
 
 label {
-  font-weight: bold;
   display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 8px;
 }
 
@@ -40,14 +44,22 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 14px;
+  margin-bottom: 10px;
 }
 
+input[type="text"],
+input[type="email"],
 textarea {
-  resize: vertical;
+  background-color: #fafafa;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #888;
 }
 
 input[type="submit"] {
@@ -56,8 +68,38 @@ input[type="submit"] {
   border: none;
   cursor: pointer;
   font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  width: 100%;
 }
 
 input[type="submit"]:hover {
   background-color: #45a049;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+button.verify-btn {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+button.verify-btn:hover {
+  background-color: #e68900;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
 }
