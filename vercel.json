@@ -3,6 +3,11 @@
     {
       "source": "/webtolead/leadForm",
       "destination": "/webtolead/leadForm.html"
+    },
+
+    {
+      "source": "/webtocase/caseForm",
+      "destination": "/webtocase/caseForm.html"
     }
   ]
 }
