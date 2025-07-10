@@ -6,9 +6,11 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  padding: 20px;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 40px 20px;
+  color: #1a1a1a;
 }
 
 .container {
@@ -16,9 +18,10 @@ body {
   max-width: 600px;
   background-color: white;
   margin: 0 auto;
-  padding: 40px;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  border: 1px solid #ddd;
 }
 
 .section-title {
@@ -36,7 +39,7 @@ label {
   display: block;
   font-size: 14px;
   font-weight: bold;
-  color: #333;
+  color: #333; /* 레이블 텍스트 색상 */
   margin-bottom: 8px;
 }
 
@@ -49,17 +52,17 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  color: #333; /* 텍스트 색상 */
+  background-color: #fff; /* 입력창 배경색 */
 }
 
-input[type="text"],
-input[type="email"],
+/* 추가적인 스타일 */
+input[type="file"] {
+  display: none;
+}
+
 textarea {
-  background-color: #fafafa;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #888;
+  resize: vertical;
 }
 
 input[type="submit"] {
@@ -77,29 +80,61 @@ input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: #4caf50;
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-button.verify-btn {
-  background-color: #ff9800;
+.cancel-btn {
+  background-color: #ddd;
+  border: none;
+}
+
+.cancel-btn:hover {
+  background-color: #bbb;
+}
+
+.submit-btn {
+  background-color: #1a1a1a;
   color: white;
   border: none;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 8px 16px;
-  border-radius: 4px;
-  margin-top: 5px;
 }
 
-button.verify-btn:hover {
-  background-color: #e68900;
+.submit-btn:hover {
+  background-color: #45a049;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 텍스트영역 디자인 */
+textarea {
+  background-color: #fafafa; /* 내용 텍스트박스 배경 */
+  color: #333; /* 텍스트 색상 */
+}
+
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #888; /* 플레이스홀더 텍스트 색상 */
+  font-style: normal; /* 기울임꼴 제거 */
+}
+
+/* 추가로 이메일과 같은 텍스트 색상 수정 */
+input[type="email"],
+input[type="text"] {
+  color: #333; /* 텍스트 입력색 */
+  background-color: white; /* 배경색을 흰색으로 설정 */
 }
