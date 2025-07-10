@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/webtolead/leadForm",
+      "destination": "/webtolead/leadForm.html"
+    }
+  ]
+}
