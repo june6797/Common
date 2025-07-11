@@ -6,8 +6,18 @@
     },
 
     {
+      "source": "/webtolead/leadFormSuccess",
+      "destination": "/webtolead/leadFormSuccess.html"
+    },
+
+    {
       "source": "/webtocase/caseForm",
-      "destination": "/webtocase/caseForm.html"
+      "destination": "/webtocase/mainCaseForm.html"
+    },
+
+    {
+      "source": "/webtocase/caseFormSuccess",
+      "destination": "/webtocase/caseFormSuccess.html"
     }
   ]
 }
