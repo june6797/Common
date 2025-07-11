@@ -11,8 +11,13 @@
     },
 
     {
-      "source": "/webtocase/caseForm",
+      "source": "/webtocase/mainCaseForm",
       "destination": "/webtocase/mainCaseForm.html"
+    },
+
+    {
+      "source": "/webtocase/caseForm",
+      "destination": "/webtocase/caseForm.html"
     },
 
     {
