@@ -91,15 +91,6 @@
             value="hs"
           /> -->
           <input type="hidden" name="external" value="1" />
-
-          <div class="form-footer">
-            <button
-              type="button"
-              class="cancel-btn"
-              onclick="location.href='https://orgfarm-0661a12eef-dev-ed.develop.my.site.com/common/s/customer-faq?tabset-e8ca7=2'"
-            >
-              취소
-            </button>
             <button type="submit" class="submit-btn">작성하기</button>
           </div>
         </div>
@@ -123,7 +114,7 @@
             .then(() => {
               // ✅ 성공했다고 가정하고 전체 창 리디렉션
               window.top.location.href =
-                "https://orgfarm-0661a12eef-dev-ed.develop.my.site.com/common/s/customer-faq/case-success?tabset-c6b56=2";
+                "https://common-sooty.vercel.app/webtocase/caseFormSuccess";
             })
             .catch(() => {
               alert("전송 중 오류가 발생했습니다.");
