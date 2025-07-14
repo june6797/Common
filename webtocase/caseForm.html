@@ -85,11 +85,11 @@
           </div>
 
           <input type="hidden" name="orgid" value="00DgK000005xa1N" />
-          <input
+          <!-- <input
             type="hidden"
             name="retURL"
             value="https://common-sooty.vercel.app/webtocase/caseFormSuccess"
-          />
+          /> -->
           <input type="hidden" name="external" value="1" />
 
           <div class="form-footer">
@@ -105,5 +105,30 @@
         </div>
       </form>
     </div>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault(); // 기본 제출 막기
+
+          const form = e.target;
+          const formData = new FormData(form);
+
+          // Web-to-Case 엔드포인트로 직접 POST 요청
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors", // Salesforce는 CORS 응답 안 줌 → 이 설정 필수
+          })
+            .then(() => {
+              // ✅ 성공했다고 가정하고 전체 창 리디렉션
+              window.top.location.href =
+                "https://common-sooty.vercel.app/webtocase/caseFormSuccess";
+            })
+            .catch(() => {
+              alert("전송 중 오류가 발생했습니다.");
+            });
+        });
+    </script>
   </body>
 </html>
