@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/webtolead/leadForm",
+      "destination": "/webtolead/leadForm.html"
+    },
+
+    {
+      "source": "/webtolead/leadFormSuccess",
+      "destination": "/webtolead/leadFormSuccess.html"
+    },
+
+    {
+      "source": "/webtocase/mainCaseForm",
+      "destination": "/webtocase/mainCaseForm.html"
+    },
+
+    {
+      "source": "/webtocase/caseForm",
+      "destination": "/webtocase/caseForm.html"
+    },
+
+    {
+      "source": "/webtocase/caseFormSuccess",
+      "destination": "/webtocase/caseFormSuccess.html"
+    }
+  ]
+}
