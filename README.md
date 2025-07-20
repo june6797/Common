@@ -1,5 +1,9 @@
 # Salesforce CRM 실전 프로젝트
 
+<p>
+  <img src="./img/Common 로고 1.png" alt="Common CRM Logo" width="300"/>
+</p>
+
 ## 📅 프로젝트 기간
 
 2024년 6월 13일 ~ 2024년 7월 31일
@@ -8,10 +12,21 @@
 
 ## 📌 프로젝트 개요
 
-이 프로젝트는 **Salesforce CRM**을 활용하여  
-**Web-to-Lead**, **Web-to-Case**, 그리고 **LWC (Lightning Web Components)** 개발 및 배포까지 실습하는 **세일즈포스 CRM 실전 프로젝트**입니다.
+본 프로젝트는 가상의 교육 기업 **커몬학습(Common Learning)**을 대상으로,  
+**Salesforce CRM 플랫폼**을 활용하여 기존의 고객 문의 처리 방식이 가진 한계를 개선하고,  
+리드/케이스 수집부터 현장 서비스까지의 프로세스를 통합·자동화하는 실전 프로젝트입니다.
 
-고객 문의 접수 및 관리 자동화와 Salesforce 플랫폼 내 컴포넌트 활용 방법을 익히기 위한 목적의 프로젝트입니다.
+### 💡 주요 목적
+
+- 비표준화된 문의 접수와 수작업 대응 프로세스를 **Web-to-Lead / Web-to-Case**로 개선
+- Salesforce의 **LWC, Apex, Service Cloud, Field Service**를 기반으로 CRM 기능 확장
+---
+
+## 🗂 ERD (Entity Relationship Diagram)
+
+<p align="center">
+  <img src="./img/CommonErd.png" alt="Salesforce CRM ERD" width="700"/>
+</p>
 
 ---
 
