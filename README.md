@@ -17,18 +17,16 @@
 
 ## 📁 폴더 구조 및 역할
 
+```
 ├── webtolead
-│ └── Salesforce Web-to-Lead용 HTML 폼
+│   └── Salesforce Web-to-Lead용 HTML 폼
 │
 ├── webtocase
-│ └── Salesforce Web-to-Case용 HTML 폼
+│   └── Salesforce Web-to-Case용 HTML 폼
 │
 └── common
-└── Salesforce DX (SFDX)로 생성한 LWC 프로젝트 (Lightning Web Components 소스)
-
-yaml
-복사
-편집
+    └── Salesforce DX (SFDX)로 생성한 LWC 프로젝트 (Lightning Web Components 소스)
+```
 
 ### 📂 webtolead
 
@@ -51,25 +49,12 @@ yaml
 ## ⚙️ 개발 및 배포 환경
 
 | 구분         | 사용 기술/환경                            |
-| ------------ | ----------------------------------------- |
+|--------------|-------------------------------------------|
 | CRM          | Salesforce Sales Cloud                    |
 | 웹 호스팅    | Vercel (정적 HTML 파일 배포)              |
 | 개발 도구    | Salesforce CLI (SFDX), Visual Studio Code |
-| 프론트엔드   | HTML, CSS, JavaScript                     |
-| 백엔드 (Org) | Apex, Lightning Web Components (LWC)      |
-
----
-
-## 🚀 사용 방법 (요약)
-
-1. **웹 폼 (webtolead, webtocase)**
-
-   - HTML 파일 내 `action` 속성에 Salesforce에서 발급받은 Web-to-Lead 또는 Web-to-Case URL 입력
-   - Vercel 등 정적 사이트 호스팅 서비스에 배포
-
-2. **LWC 컴포넌트 (common)**
-   - Salesforce DX 프로젝트 (`common`)을 Org에 배포 (`sfdx force:source:deploy`)
-   - Lightning App Builder 또는 Experience Cloud 사이트에 컴포넌트 추가
+| 프론트엔드   | HTML, CSS, JavaScript, LWC            |
+| 백엔드  | Apex, SOQL, Triggers                  |
 
 ---
 
