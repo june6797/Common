@@ -3,6 +3,7 @@
     <fullName>ContractId__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>구독내역들을 Summary 하여 볼 수 있는 계약 내용 조회</description>
+    <externalId>false</externalId>
     <label>계약 ID</label>
     <referenceTo>Contract</referenceTo>
     <relationshipLabel>구독내역</relationshipLabel>

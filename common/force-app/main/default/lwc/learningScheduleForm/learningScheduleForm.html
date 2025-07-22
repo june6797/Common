@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="학습 일정 생성">
+        <div class="slds-p-around_medium">
+            <lightning-combobox label="과정명" value={selectedProduct} onchange={handleProductChange}></lightning-combobox>
+            <lightning-combobox label="요일" options={weekdayOptions} value={selectedWeekday} onchange={handleWeekdayChange}></lightning-combobox>
+            <lightning-input type="date" label="시작일" value={startDate} onchange={handleStartDate}></lightning-input>
+            <lightning-combobox label="시작시간" options={timeOptions} value={startTime} onchange={handleStartTime}></lightning-combobox>
+            <lightning-combobox label="종료시간" options={timeOptions} value={endTime} onchange={handleEndTime}></lightning-combobox>
+            <lightning-input type="checkbox" label="반복 설정" checked={isRepeat} onchange={toggleRepeat}></lightning-input>
+            <template if:true={isRepeat}>
+                <lightning-input type="date" label="반복 종료일" value={repeatUntil} onchange={handleRepeatUntil}></lightning-input>
+            </template>
+            <lightning-button label="일정 생성" onclick={createSchedule} variant="brand"></lightning-button>
+        </div>
+    </lightning-card>
+</template>
