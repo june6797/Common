@@ -2,7 +2,6 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Quote__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
-    <externalId>false</externalId>
     <label>계약서</label>
     <referenceTo>Quote</referenceTo>
     <relationshipLabel>구독내역</relationshipLabel>
