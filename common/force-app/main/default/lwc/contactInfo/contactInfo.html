@@ -1,0 +1,29 @@
+<template>
+    <div class="child-card">
+        <div class="header">
+            <span class="emoji">👶</span>
+            <span class="child-name">
+                {childName}
+                <span class="sub-label">아동</span>
+            </span>
+        </div>
+
+
+        <div class="info-row">
+            <span class="label">🎂 생년월일:</span>
+            <span class="value">{birthdate}</span>
+        </div>
+
+        <div class="info-row">
+            <span class="label">📅 나이:</span>
+            <span class="value">{age}세</span>
+        </div>
+
+        <template if:true={subjectString}>
+            <div class="info-row">
+                <span class="label">📘 듣는 과목:</span>
+                <span class="value">{subjectString}</span>
+            </div>
+        </template>
+    </div>
+</template>
